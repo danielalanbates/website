@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact - BatesAI" description="Get in touch with BatesAI">
+  <div class="min-h-screen pt-20 px-6">
+    <div class="max-w-5xl mx-auto py-16">
+      <div class="text-center mb-16">
+        <h1 class="text-6xl font-bold mb-4">
+          Get in <span class="text-bates-cyan">Touch</span>
+        </h1>
+        <p class="text-xl text-gray-400">Let's discuss your AI project</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="p-10 rounded-2xl bg-bates-navy/30 border border-bates-cyan/20">
+          <h2 class="text-3xl font-bold mb-8 text-bates-cyan">Send a Message</h2>
+          
+          <form class="space-y-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-gray-300">Name</label>
+              <input 
+                type="text" 
+                class="w-full px-4 py-3 rounded-lg bg-bates-dark border border-bates-cyan/30 focus:border-bates-cyan focus:outline-none text-white"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-gray-300">Email</label>
+              <input 
+                type="email" 
+                class="w-full px-4 py-3 rounded-lg bg-bates-dark border border-bates-cyan/30 focus:border-bates-cyan focus:outline-none text-white"
+                placeholder="your@email.com"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-gray-300">Project Type</label>
+              <select class="w-full px-4 py-3 rounded-lg bg-bates-dark border border-bates-cyan/30 focus:border-bates-cyan focus:outline-none text-white">
+                <option>Chrome Extension</option>
+                <option>Web Application</option>
+                <option>Custom AI Solution</option>
+                <option>Consulting</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-gray-300">Message</label>
+              <textarea 
+                rows="5"
+                class="w-full px-4 py-3 rounded-lg bg-bates-dark border border-bates-cyan/30 focus:border-bates-cyan focus:outline-none text-white resize-none"
+                placeholder="Tell us about your project..."
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full px-8 py-4 bg-bates-cyan text-bates-dark rounded-lg font-semibold text-lg hover:glow-cyan-strong transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div class="p-8 rounded-xl bg-gradient-to-br from-bates-cyan/10 to-bates-navy/30 border border-bates-cyan/20">
+            <div class="text-4xl mb-4">📧</div>
+            <h3 class="text-xl font-bold mb-2 text-bates-cyan">Email Us</h3>
+            <p class="text-gray-300">hello@batesai.com</p>
+            <p class="text-sm text-gray-500 mt-2">We typically respond within 24 hours</p>
+          </div>
+
+          <div class="p-8 rounded-xl bg-gradient-to-br from-bates-cyan/10 to-bates-navy/30 border border-bates-cyan/20">
+            <div class="text-4xl mb-4">💬</div>
+            <h3 class="text-xl font-bold mb-2 text-bates-cyan">Chat with Us</h3>
+            <p class="text-gray-300 mb-4">Looking for quick answers?</p>
+            <button class="px-6 py-2 bg-bates-cyan/20 text-bates-cyan rounded-lg border border-bates-cyan/50 hover:bg-bates-cyan/30 transition">
+              Start Live Chat
+            </button>
+          </div>
+
+          <div class="p-8 rounded-xl bg-gradient-to-br from-bates-cyan/10 to-bates-navy/30 border border-bates-cyan/20">
+            <div class="text-4xl mb-4">🌐</div>
+            <h3 class="text-xl font-bold mb-2 text-bates-cyan">Follow Us</h3>
+            <div class="flex gap-4 mt-4">
+              <a href="https://github.com" class="w-12 h-12 rounded-lg bg-bates-cyan/20 border border-bates-cyan/50 flex items-center justify-center hover:bg-bates-cyan/30 transition">
+                <span class="text-2xl">💻</span>
+              </a>
+              <a href="https://twitter.com" class="w-12 h-12 rounded-lg bg-bates-cyan/20 border border-bates-cyan/50 flex items-center justify-center hover:bg-bates-cyan/30 transition">
+                <span class="text-2xl">🐦</span>
+              </a>
+              <a href="https://linkedin.com" class="w-12 h-12 rounded-lg bg-bates-cyan/20 border border-bates-cyan/50 flex items-center justify-center hover:bg-bates-cyan/30 transition">
+                <span class="text-2xl">💼</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-xl bg-gradient-to-br from-bates-cyan/10 to-bates-navy/30 border border-bates-cyan/20">
+            <h3 class="text-xl font-bold mb-4 text-bates-cyan">Office Hours</h3>
+            <div class="space-y-2 text-gray-300">
+              <div class="flex justify-between">
+                <span>Monday - Friday</span>
+                <span class="text-bates-cyan">9AM - 6PM EST</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Weekend</span>
+                <span class="text-gray-500">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

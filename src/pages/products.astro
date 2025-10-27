@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Products - BatesAI" description="Explore our AI-powered products">
+  <div class="min-h-screen pt-20 px-6">
+    <div class="max-w-7xl mx-auto py-16">
+      <div class="text-center mb-16">
+        <h1 class="text-6xl font-bold mb-4">
+          Our <span class="text-bates-cyan">Products</span>
+        </h1>
+        <p class="text-xl text-gray-400">Explore the full BatesAI ecosystem</p>
+      </div>
+
+      <!-- Product categories -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <a href="#extensions" class="p-6 rounded-xl bg-bates-navy/30 border border-bates-cyan/20 hover:border-bates-cyan/60 transition group">
+          <div class="text-4xl mb-4">🔌</div>
+          <h3 class="text-2xl font-bold mb-2 text-bates-cyan group-hover:text-white transition">Chrome Extensions</h3>
+          <p class="text-gray-400">Browser tools powered by AI</p>
+        </a>
+
+        <a href="#apps" class="p-6 rounded-xl bg-bates-navy/30 border border-bates-cyan/20 hover:border-bates-cyan/60 transition group">
+          <div class="text-4xl mb-4">📱</div>
+          <h3 class="text-2xl font-bold mb-2 text-bates-cyan group-hover:text-white transition">Applications</h3>
+          <p class="text-gray-400">Standalone AI apps</p>
+        </a>
+
+        <a href="#websites" class="p-6 rounded-xl bg-bates-navy/30 border border-bates-cyan/20 hover:border-bates-cyan/60 transition group">
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="text-2xl font-bold mb-2 text-bates-cyan group-hover:text-white transition">Web Platforms</h3>
+          <p class="text-gray-400">Full-scale AI solutions</p>
+        </a>
+      </div>
+
+      <!-- Chrome Extensions Section -->
+      <section id="extensions" class="mb-20">
+        <h2 class="text-4xl font-bold mb-8 text-bates-cyan">Chrome Extensions</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-8 rounded-2xl bg-bates-navy/30 border border-bates-cyan/20">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="text-5xl">🎮</div>
+              <div>
+                <h3 class="text-2xl font-bold">Game Assistant</h3>
+                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs">Live</span>
+              </div>
+            </div>
+            <p class="text-gray-400 mb-4">AI-powered gaming companion with real-time assistance and vision capabilities.</p>
+            <div class="flex gap-2 mb-6">
+              <span class="px-3 py-1 bg-bates-cyan/10 text-bates-cyan rounded-full text-sm">Computer Vision</span>
+              <span class="px-3 py-1 bg-bates-cyan/10 text-bates-cyan rounded-full text-sm">Real-time AI</span>
+            </div>
+            <button class="px-6 py-3 bg-bates-cyan text-bates-dark rounded-lg font-semibold hover:glow-cyan-strong transition">
+              Install Extension
+            </button>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-bates-navy/30 border border-bates-cyan/20">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="text-5xl">📝</div>
+              <div>
+                <h3 class="text-2xl font-bold">Video Call Notepad</h3>
+                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs">Live</span>
+              </div>
+            </div>
+            <p class="text-gray-400 mb-4">Automatically appears during video calls for instant note-taking and transcription.</p>
+            <div class="flex gap-2 mb-6">
+              <span class="px-3 py-1 bg-bates-cyan/10 text-bates-cyan rounded-full text-sm">Auto-detect</span>
+              <span class="px-3 py-1 bg-bates-cyan/10 text-bates-cyan rounded-full text-sm">Productivity</span>
+            </div>
+            <button class="px-6 py-3 bg-bates-cyan text-bates-dark rounded-lg font-semibold hover:glow-cyan-strong transition">
+              Install Extension
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- More categories would go here -->
+    </div>
+  </div>
+</Layout>

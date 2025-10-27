@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero';
+import ProductShowcase from '../components/ProductShowcase';
+import Features from '../components/Features';
+import CTA from '../components/CTA';
+---
+
+<Layout>
+  <Hero client:load />
+  <ProductShowcase client:visible />
+  <Features client:visible />
+  <CTA client:visible />
+</Layout>
