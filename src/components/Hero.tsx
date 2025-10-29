@@ -54,14 +54,14 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-6xl md:text-8xl font-bold mb-6">
-            <span className="text-bates-cyan">AI-Powered</span>
+            <span className="text-bates-cyan">Smart Tools</span>
             <br />
-            Innovation
+            For Everyday Life
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Cutting-edge AI products and services. Chrome extensions, applications, 
-            and websites that transform how you work.
+            AI-powered Chrome extensions and macOS apps built by an independent developer.
+            Solving real problems with simple, elegant solutions.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
@@ -85,7 +85,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Floating stats */}
+        {/* Project highlights */}
         <motion.div
           className="grid grid-cols-3 gap-8 mt-24"
           initial={{ opacity: 0 }}
@@ -93,17 +93,18 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           {[
-            { label: 'Products', value: '10+' },
-            { label: 'Active Users', value: '5K+' },
-            { label: 'AI Models', value: '20+' },
+            { label: 'Chrome Extensions', value: '🔌', desc: 'Browser tools' },
+            { label: 'macOS Apps', value: '💻', desc: 'Native applications' },
+            { label: 'Open Source', value: '🌟', desc: 'Code on GitHub' },
           ].map((stat, i) => (
             <motion.div
               key={i}
               className="p-6 rounded-xl bg-bates-navy/50 border border-bates-cyan/20 backdrop-blur-sm"
               whileHover={{ y: -5, borderColor: 'rgba(0, 217, 255, 0.5)' }}
             >
-              <div className="text-4xl font-bold text-bates-cyan mb-2">{stat.value}</div>
-              <div className="text-gray-400">{stat.label}</div>
+              <div className="text-4xl mb-2">{stat.value}</div>
+              <div className="text-lg font-bold text-bates-cyan mb-1">{stat.label}</div>
+              <div className="text-sm text-gray-400">{stat.desc}</div>
             </motion.div>
           ))}
         </motion.div>

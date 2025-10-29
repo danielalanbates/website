@@ -2,32 +2,32 @@ import { motion } from 'framer-motion';
 
 const products = [
   {
-    name: 'Game Assistant',
-    description: 'AI-powered gaming companion for enhanced gameplay',
-    icon: '🎮',
-    tags: ['Chrome Extension', 'AI Vision', 'Real-time'],
-    status: 'Live'
-  },
-  {
-    name: 'Video Call Notepad',
-    description: 'Automatic note-taking during video conferences',
-    icon: '📝',
-    tags: ['Chrome Extension', 'Auto-transcribe', 'Productivity'],
-    status: 'Live'
-  },
-  {
-    name: 'AI Content Generator',
-    description: 'Generate high-quality content with advanced AI',
-    icon: '✨',
-    tags: ['Web App', 'GPT-4', 'Multi-format'],
-    status: 'Coming Soon'
-  },
-  {
-    name: 'Smart Analytics',
-    description: 'Real-time data insights powered by AI',
-    icon: '📊',
-    tags: ['Dashboard', 'Analytics', 'ML'],
+    name: 'GistMail',
+    description: 'Role-specific AI email summaries for Gmail. Get executive summaries tailored to your job function.',
+    icon: '📧',
+    tags: ['Chrome Extension', 'Claude AI', 'Productivity'],
     status: 'Beta'
+  },
+  {
+    name: 'PhotoGear Price Tracker',
+    description: 'Never overpay for photography gear. Track prices across B&H, Adorama, KEH, and MPB with smart deal scoring.',
+    icon: '📸',
+    tags: ['Chrome Extension', 'Price Alerts', 'Photography'],
+    status: 'Beta'
+  },
+  {
+    name: 'Battery Saver Pro',
+    description: 'Automatic Low Power Mode for macOS. Extends battery life by enabling Low Power Mode at your custom threshold.',
+    icon: '🔋',
+    tags: ['macOS App', 'Menu Bar', 'Battery'],
+    status: 'Live'
+  },
+  {
+    name: 'More Coming Soon',
+    description: 'Building tools that solve real problems. Follow on GitHub to see what\'s next.',
+    icon: '🚀',
+    tags: ['In Development', 'Open Source', 'Ideas Welcome'],
+    status: 'Soon'
   },
 ];
 
@@ -42,9 +42,9 @@ export default function ProductShowcase() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-4">
-            Our <span className="text-bates-cyan">Products</span>
+            Current <span className="text-bates-cyan">Projects</span>
           </h2>
-          <p className="text-xl text-gray-400">AI solutions that work for you</p>
+          <p className="text-xl text-gray-400">Tools I'm building and testing</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
