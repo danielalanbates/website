@@ -64,8 +64,8 @@ export default function ProductShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -8, borderColor: 'rgba(0, 217, 255, 0.6)' }}
-                className="group p-8 rounded-2xl bg-bates-navy/30 border border-bates-cyan/20 backdrop-blur-sm cursor-pointer transition-all"
+                whileHover={product.link ? { y: -8, borderColor: 'rgba(0, 217, 255, 0.6)' } : {}}
+                className={`group p-8 rounded-2xl bg-bates-navy/30 border border-bates-cyan/20 backdrop-blur-sm transition-all ${product.link ? 'cursor-pointer' : ''}`}
                 {...linkProps}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -102,13 +102,15 @@ export default function ProductShowcase() {
                   ))}
                 </div>
 
-                <motion.div
-                  className="mt-6 flex items-center gap-2 text-bates-cyan font-semibold"
-                  initial={{ x: 0 }}
-                  whileHover={{ x: 5 }}
-                >
-                  {product.link ? 'Get It Now' : 'Learn More'} <span className="text-xl">→</span>
-                </motion.div>
+                {product.link && (
+                  <motion.div
+                    className="mt-6 flex items-center gap-2 text-bates-cyan font-semibold"
+                    initial={{ x: 0 }}
+                    whileHover={{ x: 5 }}
+                  >
+                    Get It Now <span className="text-xl">→</span>
+                  </motion.div>
+                )}
               </Component>
             );
           })}
