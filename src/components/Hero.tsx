@@ -93,19 +93,22 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           {[
-            { label: 'Chrome Extensions', value: '🔌', desc: 'Browser tools' },
-            { label: 'macOS Apps', value: '💻', desc: 'Native applications' },
-            { label: 'Open Source', value: '🌟', desc: 'Code on GitHub' },
+            { label: 'Chrome Extensions', value: '🔌', desc: 'Browser tools', link: '/products#extensions' },
+            { label: 'macOS Apps', value: '💻', desc: 'Native applications', link: '/products#apps' },
+            { label: 'Open Source', value: '🌟', desc: 'Code on GitHub', link: 'https://github.com/danielalanbates' },
           ].map((stat, i) => (
-            <motion.div
+            <motion.a
               key={i}
-              className="p-6 rounded-xl bg-bates-navy/50 border border-bates-cyan/20 backdrop-blur-sm"
+              href={stat.link}
+              target={stat.link.startsWith('http') ? '_blank' : undefined}
+              rel={stat.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="p-6 rounded-xl bg-bates-navy/50 border border-bates-cyan/20 backdrop-blur-sm cursor-pointer"
               whileHover={{ y: -5, borderColor: 'rgba(0, 217, 255, 0.5)' }}
             >
               <div className="text-4xl mb-2">{stat.value}</div>
               <div className="text-lg font-bold text-bates-cyan mb-1">{stat.label}</div>
               <div className="text-sm text-gray-400">{stat.desc}</div>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
       </div>
