@@ -14,10 +14,19 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid md:grid-cols-2 gap-8 mb-20">
         <div class="p-10 rounded-2xl bg-gradient-to-br from-bates-navy/50 to-bates-dark border border-bates-cyan/30">
-          <div class="text-5xl mb-6">🔌</div>
-          <h3 class="text-3xl font-bold mb-4 text-bates-cyan">Custom Extensions</h3>
+          <div class="text-5xl mb-6">
+            <svg viewBox="0 0 24 24" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" fill="#4285F4"/>
+              <circle cx="12" cy="12" r="6" fill="white"/>
+              <circle cx="12" cy="12" r="3" fill="#4285F4"/>
+              <path d="M12 2C6.48 2 2 6.48 2 12h5.5L12 7.5V2z" fill="#EA4335"/>
+              <path d="M22 12c0-5.52-4.48-10-10-10v5.5L16.5 12H22z" fill="#34A853"/>
+              <path d="M12 22c5.52 0 10-4.48 10-10h-5.5L12 16.5V22z" fill="#FBBC04"/>
+            </svg>
+          </div>
+          <h3 class="text-3xl font-bold mb-4 text-bates-cyan">Chrome Extensions</h3>
           <p class="text-gray-400 mb-6 leading-relaxed">
-            Need a Chrome extension with specific AI capabilities? We build custom browser extensions 
+            Need a Chrome extension with specific AI capabilities? We build custom browser extensions
             tailored to your workflow, integrated with cutting-edge AI models.
           </p>
           <ul class="space-y-3 mb-8">
@@ -85,10 +94,11 @@ import Layout from '../layouts/Layout.astro';
         <div class="p-10 rounded-2xl bg-gradient-to-br from-bates-navy/50 to-bates-dark border border-bates-cyan/30">
           <div class="text-5xl mb-6">🤖</div>
           <h3 class="text-3xl font-bold mb-4 text-bates-cyan">AI Consulting</h3>
-          <p class="text-gray-400 mb-6 leading-relaxed">
-            Not sure where to start? Our AI consulting services help you identify opportunities, 
+          <p class="text-gray-400 mb-2 leading-relaxed">
+            Not sure where to start? Our AI consulting services help you identify opportunities,
             choose the right models, and implement solutions that drive results.
           </p>
+          <p class="text-bates-cyan font-semibold mb-6">Free 30-minute initial consultation</p>
           <ul class="space-y-3 mb-8">
             <li class="flex items-center gap-3 text-gray-300">
               <span class="text-bates-cyan">✓</span> Strategy development
