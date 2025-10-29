@@ -93,23 +93,44 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           {[
-            { label: 'Chrome Extensions', value: '🔌', desc: 'Browser tools', link: '/products#extensions' },
+            {
+              label: 'Chrome Extensions',
+              value: (
+                <svg viewBox="0 0 24 24" className="w-12 h-12 mx-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="#4285F4"/>
+                  <circle cx="12" cy="12" r="6" fill="white"/>
+                  <circle cx="12" cy="12" r="3" fill="#4285F4"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12h5.5L12 7.5V2z" fill="#EA4335"/>
+                  <path d="M22 12c0-5.52-4.48-10-10-10v5.5L16.5 12H22z" fill="#34A853"/>
+                  <path d="M12 22c5.52 0 10-4.48 10-10h-5.5L12 16.5V22z" fill="#FBBC04"/>
+                </svg>
+              ),
+              desc: 'Browser tools',
+              link: '/products#extensions'
+            },
             { label: 'macOS Apps', value: '💻', desc: 'Native applications', link: '/products#apps' },
             { label: 'Open Source', value: '🌟', desc: 'Code on GitHub', link: 'https://github.com/danielalanbates' },
-          ].map((stat, i) => (
-            <motion.a
-              key={i}
-              href={stat.link}
-              target={stat.link.startsWith('http') ? '_blank' : undefined}
-              rel={stat.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="p-6 rounded-xl bg-bates-navy/50 border border-bates-cyan/20 backdrop-blur-sm cursor-pointer"
-              whileHover={{ y: -5, borderColor: 'rgba(0, 217, 255, 0.5)' }}
-            >
-              <div className="text-4xl mb-2">{stat.value}</div>
-              <div className="text-lg font-bold text-bates-cyan mb-1">{stat.label}</div>
-              <div className="text-sm text-gray-400">{stat.desc}</div>
-            </motion.a>
-          ))}
+          ].map((stat, i) => {
+            const Component = stat.link ? motion.a : motion.div;
+            const linkProps = stat.link ? {
+              href: stat.link,
+              target: stat.link.startsWith('http') ? '_blank' : undefined,
+              rel: stat.link.startsWith('http') ? 'noopener noreferrer' : undefined,
+            } : {};
+
+            return (
+              <Component
+                key={i}
+                {...linkProps}
+                className={`p-6 rounded-xl bg-bates-navy/50 border border-bates-cyan/20 backdrop-blur-sm ${stat.link ? 'cursor-pointer' : ''}`}
+                whileHover={stat.link ? { y: -5, borderColor: 'rgba(0, 217, 255, 0.5)' } : {}}
+              >
+                <div className="text-4xl mb-2">{stat.value}</div>
+                <div className="text-lg font-bold text-bates-cyan mb-1">{stat.label}</div>
+                <div className="text-sm text-gray-400">{stat.desc}</div>
+              </Component>
+            );
+          })}
         </motion.div>
       </div>
     </div>
