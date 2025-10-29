@@ -22,23 +22,66 @@ const {
   <link rel="icon" type="image/jpeg" href="/logo.jpg">
 </head>
 <body>
-  <nav class="fixed top-0 w-full z-50 bg-bates-dark/80 backdrop-blur-md border-b border-bates-cyan/20">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3 hover:opacity-80 transition">
-        <img src="/logo.jpg" alt="BatesAI" class="h-10 w-10 rounded-lg glow-cyan">
-        <span class="text-xl font-bold text-bates-cyan">BATESAI</span>
+  <nav class="fixed top-0 w-full z-50 bg-bates-dark/95 backdrop-blur-md border-b border-bates-cyan/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition">
+        <img src="/logo.jpg" alt="BatesAI" class="h-8 w-8 sm:h-10 sm:w-10 rounded-lg glow-cyan">
+        <span class="text-lg sm:text-xl font-bold text-bates-cyan">BATESAI</span>
       </a>
-      
-      <div class="flex gap-8 items-center">
-        <a href="/products" class="hover:text-bates-cyan transition">Products</a>
-        <a href="/services" class="hover:text-bates-cyan transition">Services</a>
-        <a href="/about" class="hover:text-bates-cyan transition">About</a>
-        <a href="/contact" class="px-6 py-2 bg-bates-cyan text-bates-dark rounded-lg font-semibold hover:glow-cyan-strong transition">
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-6 lg:gap-8 items-center">
+        <a href="/products" class="hover:text-bates-cyan transition text-sm lg:text-base">Products</a>
+        <a href="/services" class="hover:text-bates-cyan transition text-sm lg:text-base">Services</a>
+        <a href="/about" class="hover:text-bates-cyan transition text-sm lg:text-base">About</a>
+        <a href="/contact" class="px-4 lg:px-6 py-2 bg-bates-cyan text-bates-dark rounded-lg font-semibold hover:glow-cyan-strong transition text-sm lg:text-base">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-bates-cyan hover:bg-bates-cyan/10 rounded-lg transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-bates-dark/98 border-t border-bates-cyan/20">
+      <div class="px-4 py-4 space-y-3">
+        <a href="/products" class="block py-2 px-4 hover:bg-bates-cyan/10 rounded-lg transition">Products</a>
+        <a href="/services" class="block py-2 px-4 hover:bg-bates-cyan/10 rounded-lg transition">Services</a>
+        <a href="/about" class="block py-2 px-4 hover:bg-bates-cyan/10 rounded-lg transition">About</a>
+        <a href="/contact" class="block py-3 px-4 bg-bates-cyan text-bates-dark rounded-lg font-semibold text-center hover:glow-cyan-strong transition">
           Get Started
         </a>
       </div>
     </div>
   </nav>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!btn?.contains(e.target as Node) && !menu?.contains(e.target as Node)) {
+        menu?.classList.add('hidden');
+      }
+    });
+
+    // Close menu when clicking a link
+    menu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu?.classList.add('hidden');
+      });
+    });
+  </script>
 
   <main class="pt-20">
     <slot />
