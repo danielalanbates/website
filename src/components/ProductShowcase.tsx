@@ -46,9 +46,9 @@ const products = [
   },
   {
     name: 'Security Research Tools',
-    description: 'Collection of security testing tools and HackerOne report templates. Educational pentesting resources.',
+    description: 'Security hardening and vulnerability assessment tools. Ethical security testing framework for system protection.',
     icon: '🔒',
-    tags: ['Security', 'Python', 'Research'],
+    tags: ['Security', 'Python', 'Testing'],
     status: 'Live'
   },
   {

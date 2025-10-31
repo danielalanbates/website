@@ -98,7 +98,7 @@ export default function Hero() {
               value: (
                 <svg viewBox="0 0 24 24" className="w-12 h-12 mx-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="10" fill="#4285F4"/>
-                  <circle cx="12" cy="12" r="6" fill="#4285F4"/>
+                  <circle cx="12" cy="12" r="6" fill="white"/>
                   <circle cx="12" cy="12" r="3" fill="#4285F4"/>
                   <path d="M12 2C6.48 2 2 6.48 2 12h5.5L12 7.5V2z" fill="#EA4335"/>
                   <path d="M22 12c0-5.52-4.48-10-10-10v5.5L16.5 12H22z" fill="#34A853"/>
