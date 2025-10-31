@@ -3,32 +3,60 @@ import { motion } from 'framer-motion';
 const products = [
   {
     name: 'GistMail',
-    description: 'Role-specific AI email summaries for Gmail. Get executive summaries tailored to your job function.',
+    description: 'Role-specific AI email summaries for Gmail. Executive, PM, Support, and Sales roles get tailored intelligence.',
     icon: '📧',
-    tags: ['Chrome Extension', 'Claude AI', 'Productivity'],
+    tags: ['Chrome Extension', 'Claude AI', 'Email'],
     status: 'Beta'
   },
   {
     name: 'PhotoGear Price Tracker',
-    description: 'Never overpay for photography gear. Track prices across B&H, Adorama, KEH, and MPB with smart deal scoring.',
+    description: 'Never overpay for photography gear. Track prices across B&H, Adorama, KEH, MPB with intelligent deal scoring.',
     icon: '📸',
-    tags: ['Chrome Extension', 'Price Alerts', 'Photography'],
+    tags: ['Chrome Extension', 'Price Alerts', 'Shopping'],
     status: 'Beta'
   },
   {
     name: 'LowPower Automator',
-    description: 'Automatic Low Power Mode for macOS. Extends battery life by enabling Low Power Mode at your custom threshold.',
+    description: 'Automatic Low Power Mode for macOS. Menu bar app that extends battery life with customizable thresholds.',
     icon: '🔋',
     tags: ['macOS App', 'Menu Bar', 'Battery'],
     status: 'Live',
     link: 'https://batesai.gumroad.com/l/fmuqo'
   },
   {
-    name: 'More Coming Soon',
-    description: 'Building tools that solve real problems. Follow on GitHub to see what\'s next.',
-    icon: '🚀',
-    tags: ['In Development', 'Open Source', 'Ideas Welcome'],
-    status: 'Soon'
+    name: 'MeetingNotes Extension',
+    description: 'Auto-appearing notepad for video calls. Capture notes without switching windows during Zoom, Meet, or Teams.',
+    icon: '📝',
+    tags: ['Chrome Extension', 'Meetings', 'Productivity'],
+    status: 'Beta'
+  },
+  {
+    name: 'Web Scraping Toolkit',
+    description: 'Universal web scraper with price monitoring. Extract data from any website with intelligent selectors.',
+    icon: '🕸️',
+    tags: ['Python', 'Automation', 'Data'],
+    status: 'Beta'
+  },
+  {
+    name: 'File Organizer',
+    description: 'Intelligent file organization for macOS. Automatically sorts downloads and files by type, date, or custom rules.',
+    icon: '📁',
+    tags: ['macOS App', 'Automation', 'Files'],
+    status: 'Beta'
+  },
+  {
+    name: 'Security Research Tools',
+    description: 'Collection of security testing tools and HackerOne report templates. Educational pentesting resources.',
+    icon: '🔒',
+    tags: ['Security', 'Python', 'Research'],
+    status: 'Beta'
+  },
+  {
+    name: 'Agentic Workers',
+    description: 'AI agent orchestration framework. Build and deploy autonomous AI workers for complex workflows.',
+    icon: '🤖',
+    tags: ['AI Agents', 'Python', 'Automation'],
+    status: 'Development'
   },
 ];
 
