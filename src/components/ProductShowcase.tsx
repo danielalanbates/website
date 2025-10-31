@@ -49,7 +49,7 @@ const products = [
     description: 'Collection of security testing tools and HackerOne report templates. Educational pentesting resources.',
     icon: '🔒',
     tags: ['Security', 'Python', 'Research'],
-    status: 'Beta'
+    status: 'Live'
   },
   {
     name: 'Agentic Workers',
